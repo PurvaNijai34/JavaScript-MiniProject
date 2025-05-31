@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <h1 class="title">🌤️ Weather Finder</h1>
+      <form id="weatherForm">
+        <input type="text" id="locationInput" placeholder="Search for a city..." required />
+        <button type="submit">Search</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </form>
+      <div id="weatherResult" class="weather hidden">
+        <h2 id="cityName"></h2>
+        <div class="temp-condition">
+          <img id="icon" src="" alt="Weather Icon" />
+          <div class="temp-info">
+            <p class="temp"><span id="temperature"></span>°C</p>
+            <p class="condition" id="condition"></p>
+          </div>
+        </div>
+      </div>
+      <p id="error" class="error hidden">❌ City not found. Try again.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

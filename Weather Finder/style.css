@@ -1,0 +1,131 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.app {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  padding: 12px 16px;
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #222;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #0077ff;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #005ad1;
+}
+
+.weather {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.temp-condition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.temp-info {
+  margin-left: 15px;
+  text-align: left;
+}
+
+.temp {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.condition {
+  font-size: 18px;
+  color: #444;
+}
+
+#error {
+  margin-top: 15px;
+  color: red;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+#resetBtn {
+  padding: 12px 20px;
+  border: none;
+  background-color: #cccccc;
+  color: #222;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#resetBtn:hover {
+  background-color: #aaa;
+}
