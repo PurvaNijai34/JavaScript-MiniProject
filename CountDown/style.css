@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #ff6f61;
+}
+
+input[type="date"] {
+  padding: 10px;
+  border: 2px solid #ff6f61;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  outline: none;
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#countdown div {
+  background-color: #fff0ee;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 70px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+#countdown span {
+  display: block;
+  font-size: 1.5rem;
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+#countdown small {
+  color: #333;
+  font-size: 0.75rem;
+}
