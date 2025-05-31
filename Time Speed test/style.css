@@ -1,0 +1,140 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  padding: 20px;
+}
+
+.wrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.input-field {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Typing Text Box */
+.typing-test p {
+  font-size: 20px;
+  line-height: 1.8;
+  background: #f3f4f6;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: left;
+  min-height: 140px;
+  overflow-y: auto;
+}
+
+/* Character Highlighting */
+.typing-test p span {
+  position: relative;
+  font-weight: 500;
+}
+
+.typing-test p span.active {
+  color: #ff9800;
+  border-left: 2px solid #ff9800;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typing-test p span.correct {
+  color: #4caf50;
+}
+
+.typing-test p span.incorrect {
+  color: #f44336;
+  background: #ffe6e6;
+  border-radius: 4px;
+}
+
+/* Result Section */
+.content-box {
+  margin-top: 10px;
+}
+
+.result-detail ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0;
+}
+
+.result-detail li {
+  flex: 1 1 calc(50% - 10px);
+  background: #e0f7fa;
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.result-detail li:hover {
+  transform: translateY(-4px);
+}
+
+.result-detail p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.result-detail span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Try Again Button */
+button.btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #388e3c;
+}
+
+/* Text Selection */
+::selection {
+  background: #2196f3;
+  color: #fff;
+}
